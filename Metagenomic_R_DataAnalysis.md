@@ -422,4 +422,6 @@ adonis_bray
 
 The PERMANOVA result indicates whether the overall microbial community composition differs significantly between the study groups.
 
+
+Note: All Images used are generated using GPT AI
 ---
