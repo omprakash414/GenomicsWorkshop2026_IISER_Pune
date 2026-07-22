@@ -1,4 +1,4 @@
-# Commands for Human Metagenomics Pre-processing and Data Analysis in R
+# Commands for Human Metagenomics Pre-processing
 
 This hands-on session introduces the basic preprocessing steps in metagenomics analysis, including environment setup, quality control, trimming, taxonomic classification, and downstream data analysis in R.
 
