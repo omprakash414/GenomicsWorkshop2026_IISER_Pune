@@ -12,10 +12,6 @@ This practical covers downstream microbiome analysis using processed taxonomic a
 
 ## 🔹 STEP 1: Load Data into RStudio
 
-### Purpose
-
-Import the species-level or genus-level abundance matrix and the corresponding metadata into RStudio.
-
 ### Set the Working Directory
 
 Set the working directory to the folder containing the abundance matrices and metadata.
