@@ -8,7 +8,6 @@ For the practical session, we will directly use Trimmomatic, SPINGO, and MetaPhl
 
 ## Workflow Overview
 
-![Workflow](images/workflow.png)
 
 **Raw FASTQ → Quality Check → Trimming → Clean Reads → Taxonomic Classification**
 
@@ -363,7 +362,7 @@ MetaPhlAn uses its own marker-gene database derived from ChocoPhlAn.
 
 ### Requirements
 
-* Install MetaPhlAn using Conda so that all dependencies are installed correctly. 
+* Install MetaPhlAn using Conda so that all dependencies are installed correctly (https://github.com/biobakery/biobakery/wiki/metaphlan3)
 * Download and index the appropriate MetaPhlAn database.
 * Alternatively, allow MetaPhlAn to download a compatible database automatically.
 
@@ -468,4 +467,4 @@ perl create_metaphlan_genus_matrix.pl \
 
 ## MetaPhlAn Matrix-generation Workflow
 
-![MetaPhlAn Perl script workflow](images/metaphlan_perl_script_workflow.png)
+![MetaPhlAn Perl script workflow](images/AbundanceMatrix_Creation_mpa3.png)
