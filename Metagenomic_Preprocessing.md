@@ -247,7 +247,7 @@ SPINGO assigns taxonomy to 16S rRNA sequencing reads using a reference database.
 
 ### Requirements
 
-* Download SPINGO from its GitHub repository.
+* Download SPINGO from its GitHub repository (https://github.com/GuyAllard/SPINGO)
 * Extract the downloaded ZIP file.
 * Download the RDP 16S reference database.
 * Ensure that the SPINGO executable and database paths are correct.
@@ -363,10 +363,9 @@ MetaPhlAn uses its own marker-gene database derived from ChocoPhlAn.
 
 ### Requirements
 
-* Install MetaPhlAn using Conda so that all dependencies are installed correctly.
+* Install MetaPhlAn using Conda so that all dependencies are installed correctly. 
 * Download and index the appropriate MetaPhlAn database.
 * Alternatively, allow MetaPhlAn to download a compatible database automatically.
-* Confirm that the database path and index name match the installed MetaPhlAn version.
 
 ### Merge Paired-End Reads
 
