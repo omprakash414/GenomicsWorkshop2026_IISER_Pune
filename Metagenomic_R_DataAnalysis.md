@@ -17,7 +17,7 @@ This practical covers downstream microbiome analysis using processed taxonomic a
 Set the working directory to the folder containing the abundance matrices and metadata.
 
 ```r
-setwd("/ldaphome/tarini.ghosh/16s_data/")
+setwd("/ldaphome/tarini.ghosh/Downloads/")
 ```
 
 Check the current working directory:
