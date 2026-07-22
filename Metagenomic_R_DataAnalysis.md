@@ -6,8 +6,6 @@ This practical covers downstream microbiome analysis using processed taxonomic a
 
 ## Workflow Overview
 
-![Workflow](images/WorkFlow_Day2.png)
-
 **Taxonomic Abundance Matrix → Normalization → Alpha Diversity → Beta Diversity**
 
 ---
