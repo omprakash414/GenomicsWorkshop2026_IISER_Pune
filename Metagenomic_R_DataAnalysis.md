@@ -32,20 +32,13 @@ getwd()
 species_matrix <- read.delim("SpeciesAbundance_profile.txt", row.names = 1)
 ```
 
-### Import the Genus-level Abundance Matrix
-
-```r
-genus_matrix <- read.delim("GenusAbundance_profile.txt", row.names = 1)
-```
-
 For the following analysis, the species-level abundance matrix will be used.
 
 ### Import the Metadata
 
 ```r
 library(readxl)
-
-metadata_df <- data.frame(read_excel("metadata_df.xlsx"))
+metadata_df <- read.delim("metadata_df.txt", row.names = 1)
 ```
 
 Assign the sample IDs as row names:
@@ -66,63 +59,7 @@ head(species_matrix)
 head(metadata_df)
 ```
 
----
-
-## 🔹 STEP 2: Match Sample IDs
-
-### Purpose
-
-Ensure that the sample IDs in the abundance matrix and metadata are identical.
-
-### Modify Sample IDs When Required
-
-Remove the underscore and everything after it:
-
-```r
-rownames(species_matrix) <- sub("_.*","",rownames(species_matrix))
-```
-
-Remove `0` from the beginning of the sample IDs:
-
-```r
-rownames(species_matrix) <- sub("^0","",rownames(species_matrix))
-```
-
-Add `MT` at the beginning of every sample ID:
-
-```r
-rownames(species_matrix) <- paste0("MT",rownames(species_matrix))
-```
-
-### Check for Unmatched Samples
-
-Samples present in the abundance matrix but absent from the metadata:
-
-```r
-setdiff(rownames(species_matrix),rownames(metadata_df))
-```
-
-Samples present in the metadata but absent from the abundance matrix:
-
-```r
-setdiff(rownames(metadata_df),rownames(species_matrix))
-```
-
-### Retain Common Samples
-
-```r
-common_samples <- intersect(rownames(species_matrix),rownames(metadata_df))
-```
-
-```r
-species_matrix <- species_matrix[common_samples,,drop = FALSE]
-```
-
-```r
-metadata_df <- metadata_df[common_samples,,drop = FALSE]
-```
-
-Confirm that the sample order is identical:
+### Check the rownames are ordered in species df and metadata df
 
 ```r
 all(rownames(species_matrix) == rownames(metadata_df))
@@ -130,7 +67,7 @@ all(rownames(species_matrix) == rownames(metadata_df))
 
 ---
 
-## 🔹 STEP 3: Normalize the Abundance Matrix
+## 🔹 STEP 2: Normalize the Abundance Matrix
 
 ### Purpose
 
@@ -168,17 +105,9 @@ species_matrix_norm <- species_matrix/rowSums(species_matrix)
 rowSums(species_matrix_norm)
 ```
 
-The row sums should be equal to `1`.
-
-### Confirm Sample Order
-
-```r
-all(rownames(species_matrix_norm) == rownames(metadata_df))
-```
-
 ---
 
-## 🔹 STEP 4: Alpha Diversity
+## 🔹 STEP 3: Alpha Diversity
 
 ### Purpose
 
