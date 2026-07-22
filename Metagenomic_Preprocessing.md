@@ -164,7 +164,7 @@ Trimmomatic removes low-quality bases and reads that do not meet the selected qu
 conda activate microbiome
 
 trimmomatic PE \
-  -threads 30 \
+  -threads 8 \
   -phred33 \
   -trimlog trimlog_sample_R1.log \
   01071_S110_R1.fastq.gz \
@@ -218,7 +218,7 @@ for file in *_R1.fastq.gz; do
     echo "Processing ${base}..."
 
     trimmomatic PE \
-      -threads 30 \
+      -threads 8 \
       -phred33 \
       -trimlog "Trimmomatic_output/trimlog_${base}.log" \
       "${base}_R1.fastq.gz" \
