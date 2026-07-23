@@ -356,7 +356,7 @@ The PERMANOVA result indicates whether the overall microbial community compositi
 
 ## How do we use the publicly Available data for Analysis in our lab - Microbiome Informatics Lab, IIIT-Delhi?
 
-![CellPaper](images/HACK_2025y.png)
+![CellPaper](images/HACK_2025.png)
 
 ---
 
