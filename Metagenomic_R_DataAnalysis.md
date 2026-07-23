@@ -352,5 +352,27 @@ adonis_bray
 The PERMANOVA result indicates whether the overall microbial community composition differs significantly between the study groups.
 
 
+---
+
+## How do we use the publicly Available data for Analysis in our lab - Microbiome Informatics Lab, IIIT-Delhi?
+
+![CellPaper](images/HACK_2025y.png)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Note: All Images used are generated using GPT AI
 ---
